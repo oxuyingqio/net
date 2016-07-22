@@ -7,6 +7,5 @@ package cn.xuyingqi.net.server.container;
  *
  */
 public interface ServletContainer {
-	
-	
+
 }
