@@ -15,6 +15,8 @@
 		<project.build.jdk.version>1.8</project.build.jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+		<xuyingqi.version>0.0.1</xuyingqi.version>
+
 		<maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
 		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
 		<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
@@ -22,6 +24,12 @@
 
 	<!-- 依赖包 -->
 	<dependencies>
+		<dependency>
+			<groupId>cn.xuyingqi</groupId>
+			<artifactId>util</artifactId>
+			<version>${xuyingqi.version}</version>
+			<classifier>java</classifier>
+		</dependency>
 	</dependencies>
 
 	<build>
