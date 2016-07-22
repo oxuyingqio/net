@@ -1,8 +1,10 @@
-package cn.xuyingqi.net.servlet;
+package cn.xuyingqi.net.servlet.impl;
 
 import java.util.Map;
 import java.util.Set;
 
+import cn.xuyingqi.net.servlet.ServletRequest;
+import cn.xuyingqi.net.servlet.ServletSession;
 import cn.xuyingqi.util.util.MapFactory;
 
 /**

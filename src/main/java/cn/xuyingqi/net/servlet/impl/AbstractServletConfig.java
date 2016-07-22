@@ -1,4 +1,7 @@
-package cn.xuyingqi.net.servlet;
+package cn.xuyingqi.net.servlet.impl;
+
+import cn.xuyingqi.net.servlet.ServletConfig;
+import cn.xuyingqi.net.servlet.ServletContext;
 
 /**
  * 抽象公共Servlet配置
