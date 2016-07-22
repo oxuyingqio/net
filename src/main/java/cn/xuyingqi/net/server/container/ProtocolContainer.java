@@ -11,7 +11,7 @@ import cn.xuyingqi.net.server.connector.Protocol;
 public interface ProtocolContainer {
 
 	/**
-	 * 获取协议
+	 * 获取协议对象
 	 * 
 	 * @param name
 	 * @return
