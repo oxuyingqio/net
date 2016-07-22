@@ -6,17 +6,17 @@ import java.util.Set;
 import cn.xuyingqi.util.util.MapFactory;
 
 /**
- * 抽象公共Servlet会话
+ * 抽象公共Servlet请求
  * 
  * @author XuYQ
  *
  */
-public abstract class AbstractServletSession implements ServletSession {
+public abstract class AbstractServletRequest implements ServletRequest {
 
 	/**
-	 * Servlet上下文
+	 * Servlet会话
 	 */
-	private ServletContext context;
+	private ServletSession session;
 
 	/**
 	 * 属性
@@ -24,23 +24,23 @@ public abstract class AbstractServletSession implements ServletSession {
 	private Map<String, Object> attr = MapFactory.newInstance();
 
 	/**
-	 * 抽象公共Servlet会话
+	 * 抽象公共Servlet请求
 	 * 
-	 * @param servletContext
+	 * @param servletSession
 	 */
-	public AbstractServletSession(ServletContext servletContext) {
+	public AbstractServletRequest(ServletSession servletSession) {
 
-		this.context = servletContext;
+		this.session = servletSession;
 	}
 
 	@Override
-	public ServletContext getServletContext() {
+	public ServletSession getServletSession() {
 
-		return this.context;
+		return this.session;
 	}
 
 	@Override
-	public ServletSession setAttribute(String name, Object object) {
+	public ServletRequest setAttribute(String name, Object object) {
 
 		attr.put(name, object);
 

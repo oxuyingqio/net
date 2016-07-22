@@ -11,7 +11,7 @@ public abstract class AbstractServletConfig implements ServletConfig {
 	/**
 	 * Servlet上下文
 	 */
-	private ServletContext servletContext;
+	private ServletContext context;
 
 	/**
 	 * 抽象公共Servlet配置
@@ -19,11 +19,13 @@ public abstract class AbstractServletConfig implements ServletConfig {
 	 * @param servletContext
 	 */
 	public AbstractServletConfig(ServletContext servletContext) {
-		this.servletContext = servletContext;
+
+		this.context = servletContext;
 	}
 
 	@Override
 	public ServletContext getServletContext() {
-		return this.servletContext;
+
+		return this.context;
 	}
 }

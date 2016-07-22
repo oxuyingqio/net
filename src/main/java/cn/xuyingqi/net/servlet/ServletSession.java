@@ -25,7 +25,7 @@ public interface ServletSession {
 	 * @param object
 	 *            属性值
 	 */
-	public void setAttribute(String name, Object object);
+	public ServletSession setAttribute(String name, Object object);
 
 	/**
 	 * 获取属性

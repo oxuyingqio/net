@@ -38,6 +38,7 @@ public abstract class AbstractServlet implements Servlet, ServletConfig {
 
 	@Override
 	public ServletConfig getServletConfig() {
+
 		return this.config;
 	}
 
@@ -51,6 +52,7 @@ public abstract class AbstractServlet implements Servlet, ServletConfig {
 
 	@Override
 	public String getServletInfo() {
+
 		return "";
 	}
 }

@@ -25,7 +25,7 @@ public interface ServletRequest {
 	 * @param object
 	 *            属性值
 	 */
-	public void setAttribute(String name, Object object);
+	public ServletRequest setAttribute(String name, Object object);
 
 	/**
 	 * 获取属性

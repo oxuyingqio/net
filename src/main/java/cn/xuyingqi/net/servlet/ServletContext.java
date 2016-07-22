@@ -18,7 +18,7 @@ public interface ServletContext {
 	 * @param object
 	 *            属性值
 	 */
-	public void setAttribute(String name, Object object);
+	public ServletContext setAttribute(String name, Object object);
 
 	/**
 	 * 获取属性

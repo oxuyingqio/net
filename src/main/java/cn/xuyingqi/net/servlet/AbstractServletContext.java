@@ -16,20 +16,25 @@ public abstract class AbstractServletContext implements ServletContext {
 	/**
 	 * 属性
 	 */
-	private Map<String, Object> attributes = MapFactory.newInstance();
+	private Map<String, Object> attr = MapFactory.newInstance();
 
 	@Override
-	public void setAttribute(String name, Object object) {
-		attributes.put(name, object);
+	public ServletContext setAttribute(String name, Object object) {
+
+		attr.put(name, object);
+
+		return this;
 	}
 
 	@Override
 	public Object getAttribute(String name) {
-		return attributes.get(name);
+
+		return attr.get(name);
 	}
 
 	@Override
 	public Set<String> getAttributeNames() {
-		return attributes.keySet();
+
+		return attr.keySet();
 	}
 }
