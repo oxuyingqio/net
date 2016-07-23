@@ -1,4 +1,4 @@
-package cn.xuyingqi.net.server.connector.datagram;
+package cn.xuyingqi.net.server.connector.protocol.datagram;
 
 /**
  * 报头

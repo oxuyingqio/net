@@ -1,6 +1,6 @@
 package cn.xuyingqi.net.server.container;
 
-import cn.xuyingqi.net.server.connector.Protocol;
+import cn.xuyingqi.net.server.connector.protocol.Protocol;
 
 /**
  * 协议容器
