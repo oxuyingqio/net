@@ -1,11 +1,7 @@
 package cn.xuyingqi.net.servlet.impl;
 
-import java.util.Map;
-import java.util.Set;
-
 import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletSession;
-import cn.xuyingqi.util.util.MapFactory;
 
 /**
  * 抽象公共Servlet请求
@@ -21,9 +17,9 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	private ServletSession session;
 
 	/**
-	 * 属性
+	 * 编码格式
 	 */
-	private Map<String, Object> attr = MapFactory.newInstance();
+	private String charset;
 
 	/**
 	 * 抽象公共Servlet请求
@@ -42,22 +38,16 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	}
 
 	@Override
-	public ServletRequest setAttribute(String name, Object object) {
+	public String getCharacterEncoding() {
 
-		attr.put(name, object);
+		return charset;
+	}
+
+	@Override
+	public ServletRequest setCharacterEncoding(String charset) {
+
+		this.charset = charset;
 
 		return this;
-	}
-
-	@Override
-	public Object getAttribute(String name) {
-
-		return attr.get(name);
-	}
-
-	@Override
-	public Set<String> getAttributeNames() {
-
-		return attr.keySet();
 	}
 }

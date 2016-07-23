@@ -42,14 +42,6 @@ public abstract class AbstractServletSession implements ServletSession {
 	}
 
 	@Override
-	public ServletSession setAttribute(String name, Object object) {
-
-		attr.put(name, object);
-
-		return this;
-	}
-
-	@Override
 	public Object getAttribute(String name) {
 
 		return attr.get(name);
@@ -59,5 +51,21 @@ public abstract class AbstractServletSession implements ServletSession {
 	public Set<String> getAttributeNames() {
 
 		return attr.keySet();
+	}
+
+	@Override
+	public ServletSession removeAttribute(String name) {
+
+		attr.remove(name);
+
+		return this;
+	}
+
+	@Override
+	public ServletSession setAttribute(String name, Object object) {
+
+		attr.put(name, object);
+
+		return this;
 	}
 }

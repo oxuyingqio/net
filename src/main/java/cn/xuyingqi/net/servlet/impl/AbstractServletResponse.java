@@ -1,12 +1,8 @@
 package cn.xuyingqi.net.servlet.impl;
 
-import java.util.Map;
-import java.util.Set;
-
 import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletResponse;
 import cn.xuyingqi.net.servlet.ServletSession;
-import cn.xuyingqi.util.util.MapFactory;
 
 /**
  * 抽象公共Servlet响应
@@ -27,9 +23,9 @@ public abstract class AbstractServletResponse implements ServletResponse {
 	private ServletRequest request;
 
 	/**
-	 * 属性
+	 * 编码格式
 	 */
-	private Map<String, Object> attr = MapFactory.newInstance();
+	private String charset;
 
 	/**
 	 * 抽象公共Servlet响应
@@ -54,22 +50,16 @@ public abstract class AbstractServletResponse implements ServletResponse {
 	}
 
 	@Override
-	public ServletResponse setAttribute(String name, Object object) {
+	public String getCharacterEncoding() {
 
-		attr.put(name, object);
+		return this.charset;
+	}
+
+	@Override
+	public ServletResponse setCharacterEncoding(String charset) {
+
+		this.charset = charset;
 
 		return this;
-	}
-
-	@Override
-	public Object getAttribute(String name) {
-
-		return attr.get(name);
-	}
-
-	@Override
-	public Set<String> getAttributeNames() {
-
-		return attr.keySet();
 	}
 }

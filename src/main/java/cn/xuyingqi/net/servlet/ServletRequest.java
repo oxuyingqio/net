@@ -1,7 +1,5 @@
 package cn.xuyingqi.net.servlet;
 
-import java.util.Set;
-
 /**
  * Servlet请求
  * 
@@ -18,28 +16,25 @@ public interface ServletRequest {
 	public ServletSession getServletSession();
 
 	/**
-	 * 设置属性
-	 * 
-	 * @param name
-	 *            属性名称
-	 * @param object
-	 *            属性值
-	 */
-	public ServletRequest setAttribute(String name, Object object);
-
-	/**
-	 * 获取属性
-	 * 
-	 * @param name
-	 *            属性名称
-	 * @return
-	 */
-	public Object getAttribute(String name);
-
-	/**
-	 * 获取属性名称集合
+	 * 获取编码格式
 	 * 
 	 * @return
 	 */
-	public Set<String> getAttributeNames();
+	public String getCharacterEncoding();
+
+	/**
+	 * 获取报体长度
+	 * 
+	 * @return
+	 */
+	public int getContentLength();
+
+	/**
+	 * 设置编码格式
+	 * 
+	 * @param charset
+	 *            编码格式
+	 * @return
+	 */
+	public ServletRequest setCharacterEncoding(String charset);
 }

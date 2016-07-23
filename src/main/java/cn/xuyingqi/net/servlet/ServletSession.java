@@ -18,16 +18,6 @@ public interface ServletSession {
 	public ServletContext getServletContext();
 
 	/**
-	 * 设置属性
-	 * 
-	 * @param name
-	 *            属性名称
-	 * @param object
-	 *            属性值
-	 */
-	public ServletSession setAttribute(String name, Object object);
-
-	/**
 	 * 获取属性
 	 * 
 	 * @param name
@@ -42,4 +32,72 @@ public interface ServletSession {
 	 * @return
 	 */
 	public Set<String> getAttributeNames();
+
+	/**
+	 * 获取服务器IP地址
+	 * 
+	 * @return
+	 */
+	public String getLocalAddr();
+
+	/**
+	 * 获取服务器主机名
+	 * 
+	 * @return
+	 */
+	public String getLocalHost();
+
+	/**
+	 * 获取服务器端口号
+	 * 
+	 * @return
+	 */
+	public int getLocalPort();
+
+	/**
+	 * 获取协议名称
+	 * 
+	 * @return
+	 */
+	public String getProtocol();
+
+	/**
+	 * 获取客户端IP地址
+	 * 
+	 * @return
+	 */
+	public String getRemoteAddr();
+
+	/**
+	 * 获取客户端主机名
+	 * 
+	 * @return
+	 */
+	public String getRemoteHost();
+
+	/**
+	 * 获取客户端端口号
+	 * 
+	 * @return
+	 */
+	public int getRemotePort();
+
+	/**
+	 * 移除属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @return
+	 */
+	public ServletSession removeAttribute(String name);
+
+	/**
+	 * 设置属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @param object
+	 *            属性值
+	 */
+	public ServletSession setAttribute(String name, Object object);
 }

@@ -11,16 +11,6 @@ import java.util.Set;
 public interface ServletContext {
 
 	/**
-	 * 设置属性
-	 * 
-	 * @param name
-	 *            属性名称
-	 * @param object
-	 *            属性值
-	 */
-	public ServletContext setAttribute(String name, Object object);
-
-	/**
 	 * 获取属性
 	 * 
 	 * @param name
@@ -35,4 +25,23 @@ public interface ServletContext {
 	 * @return
 	 */
 	public Set<String> getAttributeNames();
+
+	/**
+	 * 移除属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @return
+	 */
+	public ServletContext removeAttribute(String name);
+
+	/**
+	 * 设置属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @param object
+	 *            属性值
+	 */
+	public ServletContext setAttribute(String name, Object object);
 }
