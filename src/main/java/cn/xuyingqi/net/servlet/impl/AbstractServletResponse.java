@@ -1,6 +1,5 @@
 package cn.xuyingqi.net.servlet.impl;
 
-import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletResponse;
 import cn.xuyingqi.net.servlet.ServletSession;
 
@@ -16,11 +15,6 @@ public abstract class AbstractServletResponse implements ServletResponse {
 	 * Servlet会话
 	 */
 	private ServletSession session;
-
-	/**
-	 * Servlet请求
-	 */
-	private ServletRequest request;
 
 	/**
 	 * 编码格式
@@ -42,12 +36,6 @@ public abstract class AbstractServletResponse implements ServletResponse {
 	public ServletSession getServletSession() {
 
 		return this.session;
-	}
-
-	@Override
-	public ServletRequest getServletRequest() {
-
-		return this.request;
 	}
 
 	@Override

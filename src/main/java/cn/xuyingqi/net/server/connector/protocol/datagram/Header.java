@@ -8,4 +8,10 @@ package cn.xuyingqi.net.server.connector.protocol.datagram;
  */
 public interface Header {
 
+	/**
+	 * 获取报体长度
+	 * 
+	 * @return
+	 */
+	public int getContentLength();
 }
