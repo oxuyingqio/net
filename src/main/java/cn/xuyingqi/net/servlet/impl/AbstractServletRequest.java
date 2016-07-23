@@ -1,5 +1,7 @@
 package cn.xuyingqi.net.servlet.impl;
 
+import java.net.InetAddress;
+
 import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletSession;
 
@@ -42,6 +44,42 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	public String getCharacterEncoding() {
 
 		return charset;
+	}
+
+	@Override
+	public InetAddress getLocalAddr() {
+
+		return this.getServletSession().getLocalAddr();
+	}
+
+	@Override
+	public String getLocalHost() {
+
+		return this.getServletSession().getLocalHost();
+	}
+
+	@Override
+	public int getLocalPort() {
+
+		return this.getServletSession().getLocalPort();
+	}
+
+	@Override
+	public InetAddress getRemoteAddr() {
+
+		return this.getServletSession().getRemoteAddr();
+	}
+
+	@Override
+	public String getRemoteHost() {
+
+		return this.getServletSession().getRemoteHost();
+	}
+
+	@Override
+	public int getRemotePort() {
+
+		return this.getServletSession().getRemotePort();
 	}
 
 	@Override

@@ -60,6 +60,7 @@ public interface ServletSession {
 	 * 
 	 * @return
 	 */
+	@Deprecated
 	public String getProtocol();
 
 	/**
