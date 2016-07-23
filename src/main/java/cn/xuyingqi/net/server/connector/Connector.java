@@ -15,10 +15,16 @@ public interface Connector {
 	 * 
 	 * @param connectorConfig
 	 *            连接器配置
+	 */
+	public void init(ConnectorConfig connectorConfig);
+
+	/**
+	 * 设置协议容器
+	 * 
 	 * @param protocolContainer
 	 *            协议容器
 	 */
-	public void init(ConnectorConfig connectorConfig, ProtocolContainer protocolContainer);
+	public void setProtocolContainer(ProtocolContainer protocolContainer);
 
 	/**
 	 * 连接
