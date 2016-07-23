@@ -12,13 +12,6 @@ import java.util.Set;
 public interface ServletSession {
 
 	/**
-	 * 获取Servlet上下文
-	 * 
-	 * @return
-	 */
-	public ServletContext getServletContext();
-
-	/**
 	 * 获取属性
 	 * 
 	 * @param name
@@ -33,6 +26,34 @@ public interface ServletSession {
 	 * @return
 	 */
 	public Set<String> getAttributeNames();
+
+	/**
+	 * 获取创建时间
+	 * 
+	 * @return
+	 */
+	public long getCreationTime();
+
+	/**
+	 * 获取会话ID
+	 * 
+	 * @return
+	 */
+	public String getId();
+
+	/**
+	 * 获取最后一次请求的时间
+	 * 
+	 * @return
+	 */
+	public long getLastAccessedTime();
+
+	/**
+	 * 获取Servlet上下文
+	 * 
+	 * @return
+	 */
+	public ServletContext getServletContext();
 
 	/**
 	 * 获取服务器IP地址
@@ -60,7 +81,6 @@ public interface ServletSession {
 	 * 
 	 * @return
 	 */
-	@Deprecated
 	public String getProtocol();
 
 	/**

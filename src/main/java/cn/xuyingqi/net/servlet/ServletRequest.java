@@ -1,6 +1,8 @@
 package cn.xuyingqi.net.servlet;
 
 import java.net.InetAddress;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Servlet请求
@@ -11,11 +13,20 @@ import java.net.InetAddress;
 public interface ServletRequest {
 
 	/**
-	 * 获取Servlet会话
+	 * 获取属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @return
+	 */
+	public Object getAttribute(String name);
+
+	/**
+	 * 获取属性名称集合
 	 * 
 	 * @return
 	 */
-	public ServletSession getServletSession();
+	public Set<String> getAttributeNames();
 
 	/**
 	 * 获取编码格式
@@ -25,11 +36,18 @@ public interface ServletRequest {
 	public String getCharacterEncoding();
 
 	/**
-	 * 获取报体长度
+	 * 获取内容长度
 	 * 
 	 * @return
 	 */
 	public int getContentLength();
+
+	/**
+	 * 获取内容类型
+	 * 
+	 * @return
+	 */
+	public String getContentType();
 
 	/**
 	 * 获取服务器IP地址
@@ -53,6 +71,35 @@ public interface ServletRequest {
 	public int getLocalPort();
 
 	/**
+	 * 获取参数的值
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public Object getParameter(String name);
+
+	/**
+	 * 获取参数
+	 * 
+	 * @return
+	 */
+	public Map<String, Object> getParameterMap();
+
+	/**
+	 * 获取参数名称集合
+	 * 
+	 * @return
+	 */
+	public Set<String> getParameterNames();
+
+	/**
+	 * 获取协议名称
+	 * 
+	 * @return
+	 */
+	public String getProtocol();
+
+	/**
 	 * 获取客户端IP地址
 	 * 
 	 * @return
@@ -74,6 +121,25 @@ public interface ServletRequest {
 	public int getRemotePort();
 
 	/**
+	 * 移除属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @return
+	 */
+	public ServletRequest removeAttribute(String name);
+
+	/**
+	 * 设置属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @param object
+	 *            属性值
+	 */
+	public ServletRequest setAttribute(String name, Object object);
+
+	/**
 	 * 设置编码格式
 	 * 
 	 * @param charset
@@ -81,4 +147,11 @@ public interface ServletRequest {
 	 * @return
 	 */
 	public ServletRequest setCharacterEncoding(String charset);
+
+	/**
+	 * 获取Servlet会话
+	 * 
+	 * @return
+	 */
+	public ServletSession getServletSession();
 }

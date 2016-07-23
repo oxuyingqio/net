@@ -27,6 +27,28 @@ public interface ServletContext {
 	public Set<String> getAttributeNames();
 
 	/**
+	 * 获取初始化参数的值
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public Object getInitParameter(String name);
+
+	/**
+	 * 获取初始化参数集合
+	 * 
+	 * @return
+	 */
+	public Set<String> getInitParamterNames();
+
+	/**
+	 * 获取Servlet上下文名称
+	 * 
+	 * @return
+	 */
+	public String getServletContextName();
+
+	/**
 	 * 移除属性
 	 * 
 	 * @param name
