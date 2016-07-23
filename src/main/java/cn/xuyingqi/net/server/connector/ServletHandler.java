@@ -14,7 +14,7 @@ public interface ServletHandler {
 	 * 初始化Servlet处理类
 	 * 
 	 * @param servletContainer
-	 *            servlet容器
+	 *            Servlet容器
 	 */
 	public void init(ServletContainer servletContainer);
 }

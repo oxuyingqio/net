@@ -31,6 +31,7 @@ public abstract class AbstractServletResponse implements ServletResponse {
 	 * 抽象公共Servlet响应
 	 * 
 	 * @param servletSession
+	 *            Servlet会话
 	 */
 	public AbstractServletResponse(ServletSession servletSession) {
 

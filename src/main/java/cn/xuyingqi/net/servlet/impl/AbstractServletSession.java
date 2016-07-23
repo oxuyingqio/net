@@ -29,6 +29,7 @@ public abstract class AbstractServletSession implements ServletSession {
 	 * 抽象公共Servlet会话
 	 * 
 	 * @param servletContext
+	 *            Servlet上下文
 	 */
 	public AbstractServletSession(ServletContext servletContext) {
 

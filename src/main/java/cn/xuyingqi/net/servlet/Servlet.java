@@ -12,7 +12,7 @@ public interface Servlet {
 	 * 初始化Servlet
 	 * 
 	 * @param servletConfig
-	 *            servlet配置
+	 *            Servlet配置
 	 */
 	public void init(ServletConfig servletConfig);
 

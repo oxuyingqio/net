@@ -20,6 +20,7 @@ public abstract class AbstractServletConfig implements ServletConfig {
 	 * 抽象公共Servlet配置
 	 * 
 	 * @param servletContext
+	 *            Servlet上下文
 	 */
 	public AbstractServletConfig(ServletContext servletContext) {
 

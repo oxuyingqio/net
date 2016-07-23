@@ -1,5 +1,6 @@
 package cn.xuyingqi.net.servlet;
 
+import java.net.InetAddress;
 import java.util.Set;
 
 /**
@@ -38,7 +39,7 @@ public interface ServletSession {
 	 * 
 	 * @return
 	 */
-	public String getLocalAddr();
+	public InetAddress getLocalAddr();
 
 	/**
 	 * 获取服务器主机名
@@ -66,7 +67,7 @@ public interface ServletSession {
 	 * 
 	 * @return
 	 */
-	public String getRemoteAddr();
+	public InetAddress getRemoteAddr();
 
 	/**
 	 * 获取客户端主机名

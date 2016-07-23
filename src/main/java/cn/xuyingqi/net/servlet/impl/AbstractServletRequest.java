@@ -25,6 +25,7 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	 * 抽象公共Servlet请求
 	 * 
 	 * @param servletSession
+	 *            Servlet会话
 	 */
 	public AbstractServletRequest(ServletSession servletSession) {
 

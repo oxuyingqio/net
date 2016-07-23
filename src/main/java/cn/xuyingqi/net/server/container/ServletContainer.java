@@ -16,7 +16,7 @@ public interface ServletContainer {
 	 * 获取Servlet
 	 * 
 	 * @param name
-	 *            servlet名称
+	 *            Servlet名称
 	 * @return
 	 */
 	public Servlet getServlet(String name);
