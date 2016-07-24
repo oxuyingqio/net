@@ -1,7 +1,7 @@
 package cn.xuyingqi.net.servlet.impl;
 
+import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletResponse;
-import cn.xuyingqi.net.servlet.ServletSession;
 
 /**
  * 抽象公共Servlet响应
@@ -12,31 +12,45 @@ import cn.xuyingqi.net.servlet.ServletSession;
 public abstract class AbstractServletResponse implements ServletResponse {
 
 	/**
-	 * Servlet会话
+	 * Servlet请求
 	 */
-	private ServletSession session;
+	private ServletRequest request;
 
 	/**
 	 * 编码格式
 	 */
-	private String charset;
+	public String charset;
+
+	/**
+	 * 内容类型
+	 */
+	private String type;
 
 	/**
 	 * 抽象公共Servlet响应
 	 * 
-	 * @param servletSession
-	 *            Servlet会话
+	 * @param servletRequest
+	 *            Servlet请求
 	 */
-	public AbstractServletResponse(ServletSession servletSession) {
+	public AbstractServletResponse(ServletRequest servletRequest) {
 
-		this.session = servletSession;
+		this.request = servletRequest;
 	}
 
 	@Override
-	public ServletSession getServletSession() {
+	public ServletRequest getServletRequest() {
 
-		return this.session;
+		return this.request;
 	}
+
+	@Override
+	public abstract ServletResponse addHeader(String name, Object value);
+
+	@Override
+	public abstract boolean containsHeader(String name);
+
+	@Override
+	public abstract ServletResponse setHeader(String name, Object value);
 
 	@Override
 	public String getCharacterEncoding() {
@@ -51,4 +65,27 @@ public abstract class AbstractServletResponse implements ServletResponse {
 
 		return this;
 	}
+
+	@Override
+	public String getContentType() {
+
+		return this.type;
+	}
+
+	@Override
+	public ServletResponse setContentType(String type) {
+
+		this.type = type;
+
+		return this;
+	}
+
+	@Override
+	public abstract ServletResponse setContentLength(int len);
+
+	@Override
+	public abstract ServletResponse setStatus(int status);
+
+	@Override
+	public abstract boolean isCommitted();
 }

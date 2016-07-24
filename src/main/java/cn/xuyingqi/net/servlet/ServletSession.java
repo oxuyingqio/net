@@ -12,27 +12,11 @@ import java.util.Set;
 public interface ServletSession {
 
 	/**
-	 * 获取属性
-	 * 
-	 * @param name
-	 *            属性名称
-	 * @return
-	 */
-	public Object getAttribute(String name);
-
-	/**
-	 * 获取属性名称集合
+	 * 获取Servlet上下文
 	 * 
 	 * @return
 	 */
-	public Set<String> getAttributeNames();
-
-	/**
-	 * 获取创建时间
-	 * 
-	 * @return
-	 */
-	public long getCreationTime();
+	public ServletContext getServletContext();
 
 	/**
 	 * 获取会话ID
@@ -42,18 +26,18 @@ public interface ServletSession {
 	public String getId();
 
 	/**
+	 * 获取创建时间
+	 * 
+	 * @return
+	 */
+	public long getCreationTime();
+
+	/**
 	 * 获取最后一次请求的时间
 	 * 
 	 * @return
 	 */
 	public long getLastAccessedTime();
-
-	/**
-	 * 获取Servlet上下文
-	 * 
-	 * @return
-	 */
-	public ServletContext getServletContext();
 
 	/**
 	 * 获取服务器IP地址
@@ -103,6 +87,22 @@ public interface ServletSession {
 	 * @return
 	 */
 	public int getRemotePort();
+
+	/**
+	 * 获取属性名称集合
+	 * 
+	 * @return
+	 */
+	public Set<String> getAttributeNames();
+
+	/**
+	 * 获取属性
+	 * 
+	 * @param name
+	 *            属性名称
+	 * @return
+	 */
+	public Object getAttribute(String name);
 
 	/**
 	 * 移除属性

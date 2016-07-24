@@ -20,15 +20,21 @@ public abstract class AbstractServletContext implements ServletContext {
 	private Map<String, Object> attr = MapFactory.newInstance();
 
 	@Override
-	public Object getAttribute(String name) {
+	public abstract Set<String> getInitParamterNames();
 
-		return attr.get(name);
-	}
+	@Override
+	public abstract Object getInitParameter(String name);
 
 	@Override
 	public Set<String> getAttributeNames() {
 
 		return attr.keySet();
+	}
+
+	@Override
+	public Object getAttribute(String name) {
+
+		return attr.get(name);
 	}
 
 	@Override
@@ -46,4 +52,7 @@ public abstract class AbstractServletContext implements ServletContext {
 
 		return this;
 	}
+
+	@Override
+	public abstract String getServletContextName();
 }

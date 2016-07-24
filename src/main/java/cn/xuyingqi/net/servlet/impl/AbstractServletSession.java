@@ -1,7 +1,9 @@
 package cn.xuyingqi.net.servlet.impl;
 
+import java.net.InetAddress;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 
 import cn.xuyingqi.net.servlet.ServletContext;
 import cn.xuyingqi.net.servlet.ServletSession;
@@ -21,6 +23,16 @@ public abstract class AbstractServletSession implements ServletSession {
 	private ServletContext context;
 
 	/**
+	 * 会话ID
+	 */
+	private String id;
+
+	/**
+	 * 会话创建时间
+	 */
+	private long creationTime;
+
+	/**
 	 * 属性
 	 */
 	private Map<String, Object> attr = MapFactory.newInstance();
@@ -33,7 +45,12 @@ public abstract class AbstractServletSession implements ServletSession {
 	 */
 	public AbstractServletSession(ServletContext servletContext) {
 
+		// Servlet上下文
 		this.context = servletContext;
+		// 会话ID
+		this.id = UUID.randomUUID().toString();
+		// 会话创建时间
+		this.creationTime = System.currentTimeMillis();
 	}
 
 	@Override
@@ -43,15 +60,51 @@ public abstract class AbstractServletSession implements ServletSession {
 	}
 
 	@Override
-	public Object getAttribute(String name) {
+	public String getId() {
 
-		return attr.get(name);
+		return this.id;
 	}
+
+	@Override
+	public long getCreationTime() {
+
+		return this.creationTime;
+	}
+
+	@Override
+	public abstract long getLastAccessedTime();
+
+	@Override
+	public abstract InetAddress getLocalAddr();
+
+	@Override
+	public abstract String getLocalHost();
+
+	@Override
+	public abstract int getLocalPort();
+
+	@Override
+	public abstract String getProtocol();
+
+	@Override
+	public abstract InetAddress getRemoteAddr();
+
+	@Override
+	public abstract String getRemoteHost();
+
+	@Override
+	public abstract int getRemotePort();
 
 	@Override
 	public Set<String> getAttributeNames() {
 
 		return attr.keySet();
+	}
+
+	@Override
+	public Object getAttribute(String name) {
+
+		return attr.get(name);
 	}
 
 	@Override

@@ -2,7 +2,6 @@ package cn.xuyingqi.net.servlet.impl;
 
 import cn.xuyingqi.net.servlet.Servlet;
 import cn.xuyingqi.net.servlet.ServletConfig;
-import cn.xuyingqi.net.servlet.ServletContext;
 import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletResponse;
 
@@ -12,7 +11,7 @@ import cn.xuyingqi.net.servlet.ServletResponse;
  * @author XuYQ
  *
  */
-public abstract class AbstractServlet implements Servlet, ServletConfig {
+public abstract class AbstractServlet implements Servlet {
 
 	/**
 	 * Servlet配置
@@ -24,16 +23,6 @@ public abstract class AbstractServlet implements Servlet, ServletConfig {
 	 */
 	public AbstractServlet() {
 
-	}
-
-	@Override
-	public ServletContext getServletContext() {
-
-		if (this.getServletConfig() != null) {
-			return this.getServletConfig().getServletContext();
-		}
-
-		return null;
 	}
 
 	@Override
@@ -52,13 +41,8 @@ public abstract class AbstractServlet implements Servlet, ServletConfig {
 	public abstract void service(ServletRequest request, ServletResponse response);
 
 	@Override
-	public void destroy() {
-
-	}
+	public abstract void destroy();
 
 	@Override
-	public String getServletInfo() {
-
-		return "";
-	}
+	public abstract String getServletInfo();
 }

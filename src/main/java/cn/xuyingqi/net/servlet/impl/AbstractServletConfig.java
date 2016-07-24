@@ -1,5 +1,7 @@
 package cn.xuyingqi.net.servlet.impl;
 
+import java.util.Set;
+
 import cn.xuyingqi.net.servlet.ServletConfig;
 import cn.xuyingqi.net.servlet.ServletContext;
 
@@ -28,8 +30,17 @@ public abstract class AbstractServletConfig implements ServletConfig {
 	}
 
 	@Override
+	public abstract Set<String> getInitParameterNames();
+
+	@Override
+	public abstract Object getInitParameter(String name);
+
+	@Override
 	public ServletContext getServletContext() {
 
 		return this.context;
 	}
+
+	@Override
+	public abstract String getServletName();
 }

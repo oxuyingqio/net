@@ -11,19 +11,19 @@ import java.util.Set;
 public interface ServletConfig {
 
 	/**
+	 * 获取初始化参数集合
+	 * 
+	 * @return
+	 */
+	public Set<String> getInitParameterNames();
+
+	/**
 	 * 获取初始化参数的值
 	 * 
 	 * @param name
 	 * @return
 	 */
 	public Object getInitParameter(String name);
-
-	/**
-	 * 获取初始化参数集合
-	 * 
-	 * @return
-	 */
-	public Set<String> getInitParameterNames();
 
 	/**
 	 * 获取Servlet上下文

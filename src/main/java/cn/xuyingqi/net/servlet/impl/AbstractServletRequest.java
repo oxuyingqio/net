@@ -1,9 +1,12 @@
 package cn.xuyingqi.net.servlet.impl;
 
 import java.net.InetAddress;
+import java.util.Map;
+import java.util.Set;
 
 import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletSession;
+import cn.xuyingqi.util.util.MapFactory;
 
 /**
  * 抽象公共Servlet请求
@@ -19,9 +22,9 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	private ServletSession session;
 
 	/**
-	 * 编码格式
+	 * 属性
 	 */
-	private String charset;
+	private Map<String, Object> attr = MapFactory.newInstance();
 
 	/**
 	 * 抽象公共Servlet请求
@@ -41,9 +44,9 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	}
 
 	@Override
-	public String getCharacterEncoding() {
+	public String getServletSessionId() {
 
-		return charset;
+		return this.getServletSession().getId();
 	}
 
 	@Override
@@ -65,6 +68,12 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	}
 
 	@Override
+	public String getProtocol() {
+
+		return this.getServletSession().getProtocol();
+	}
+
+	@Override
 	public InetAddress getRemoteAddr() {
 
 		return this.getServletSession().getRemoteAddr();
@@ -83,9 +92,50 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	}
 
 	@Override
-	public ServletRequest setCharacterEncoding(String charset) {
+	public abstract Set<String> getHeaderNames();
 
-		this.charset = charset;
+	@Override
+	public abstract Object getHeader(String name);
+
+	@Override
+	public abstract String getCharacterEncoding();
+
+	@Override
+	public abstract String getContentType();
+
+	@Override
+	public abstract int getContentLength();
+
+	@Override
+	public abstract Set<String> getParameterNames();
+
+	@Override
+	public abstract Object getParameter(String name);
+
+	@Override
+	public Set<String> getAttributeNames() {
+
+		return attr.keySet();
+	}
+
+	@Override
+	public Object getAttribute(String name) {
+
+		return attr.get(name);
+	}
+
+	@Override
+	public ServletRequest removeAttribute(String name) {
+
+		attr.remove(name);
+
+		return this;
+	}
+
+	@Override
+	public ServletRequest setAttribute(String name, Object object) {
+
+		attr.put(name, object);
 
 		return this;
 	}

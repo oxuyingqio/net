@@ -11,20 +11,11 @@ import java.util.Set;
 public interface ServletContext {
 
 	/**
-	 * 获取属性
-	 * 
-	 * @param name
-	 *            属性名称
-	 * @return
-	 */
-	public Object getAttribute(String name);
-
-	/**
-	 * 获取属性名称集合
+	 * 获取初始化参数集合
 	 * 
 	 * @return
 	 */
-	public Set<String> getAttributeNames();
+	public Set<String> getInitParamterNames();
 
 	/**
 	 * 获取初始化参数的值
@@ -35,18 +26,20 @@ public interface ServletContext {
 	public Object getInitParameter(String name);
 
 	/**
-	 * 获取初始化参数集合
+	 * 获取属性名称集合
 	 * 
 	 * @return
 	 */
-	public Set<String> getInitParamterNames();
+	public Set<String> getAttributeNames();
 
 	/**
-	 * 获取Servlet上下文名称
+	 * 获取属性
 	 * 
+	 * @param name
+	 *            属性名称
 	 * @return
 	 */
-	public String getServletContextName();
+	public Object getAttribute(String name);
 
 	/**
 	 * 移除属性
@@ -66,4 +59,11 @@ public interface ServletContext {
 	 *            属性值
 	 */
 	public ServletContext setAttribute(String name, Object object);
+
+	/**
+	 * 获取Servlet上下文名称
+	 * 
+	 * @return
+	 */
+	public String getServletContextName();
 }
