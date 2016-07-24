@@ -13,22 +13,6 @@ import cn.xuyingqi.net.servlet.ServletContext;
  */
 public abstract class AbstractServletConfig implements ServletConfig {
 
-	/**
-	 * Servlet上下文
-	 */
-	private ServletContext context;
-
-	/**
-	 * 抽象公共Servlet配置
-	 * 
-	 * @param servletContext
-	 *            Servlet上下文
-	 */
-	public AbstractServletConfig(ServletContext servletContext) {
-
-		this.context = servletContext;
-	}
-
 	@Override
 	public abstract Set<String> getInitParameterNames();
 
@@ -36,10 +20,7 @@ public abstract class AbstractServletConfig implements ServletConfig {
 	public abstract Object getInitParameter(String name);
 
 	@Override
-	public ServletContext getServletContext() {
-
-		return this.context;
-	}
+	public abstract ServletContext getServletContext();
 
 	@Override
 	public abstract String getServletName();
