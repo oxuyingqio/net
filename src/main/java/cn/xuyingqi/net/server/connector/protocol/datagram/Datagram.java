@@ -14,4 +14,11 @@ public interface Datagram {
 	 * @return
 	 */
 	public Header getHeader();
+
+	/**
+	 * 获取报体
+	 * 
+	 * @return
+	 */
+	public Payload getPayload();
 }

@@ -3,12 +3,12 @@ package cn.xuyingqi.net.server.connector.protocol.datagram;
 import java.util.Map;
 
 /**
- * 报头
+ * 报体
  * 
  * @author XuYQ
  *
  */
-public interface Header {
+public interface Payload {
 
 	/**
 	 * 转换为Map集合
