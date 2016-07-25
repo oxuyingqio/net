@@ -13,6 +13,13 @@ import cn.xuyingqi.net.servlet.Servlet;
 public interface ServletContainer {
 
 	/**
+	 * 获取Servlet的名称集合
+	 * 
+	 * @return
+	 */
+	public Set<String> getServletNames();
+
+	/**
 	 * 获取Servlet
 	 * 
 	 * @param name
@@ -20,11 +27,4 @@ public interface ServletContainer {
 	 * @return
 	 */
 	public Servlet getServlet(String name);
-
-	/**
-	 * 获取Servlet的名称集合
-	 * 
-	 * @return
-	 */
-	public Set<String> getServletNames();
 }

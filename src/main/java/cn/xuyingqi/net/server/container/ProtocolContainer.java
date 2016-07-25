@@ -13,17 +13,17 @@ import cn.xuyingqi.net.server.connector.protocol.Protocol;
 public interface ProtocolContainer {
 
 	/**
+	 * 获取协议名称集合
+	 * 
+	 * @return
+	 */
+	public Set<String> getProtocolNames();
+
+	/**
 	 * 获取协议
 	 * 
 	 * @param name
 	 * @return
 	 */
 	public Protocol getProtocol(String name);
-
-	/**
-	 * 获取协议名称集合
-	 * 
-	 * @return
-	 */
-	public Set<String> getProtocolNames();
 }

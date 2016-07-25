@@ -7,5 +7,5 @@ package cn.xuyingqi.net.server.connector.protocol;
  *
  */
 public interface Protocol {
-	
+
 }
