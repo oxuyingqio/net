@@ -1,4 +1,4 @@
-package cn.xuyingqi.net.server.connector;
+package cn.xuyingqi.net.server.servlet;
 
 import cn.xuyingqi.net.server.container.ServletContainer;
 
