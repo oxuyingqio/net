@@ -7,11 +7,5 @@ package cn.xuyingqi.net.server.connector.protocol;
  *
  */
 public interface Protocol {
-
-	/**
-	 * 获取协议名称
-	 * 
-	 * @return
-	 */
-	public String getProtocolName();
+	
 }
