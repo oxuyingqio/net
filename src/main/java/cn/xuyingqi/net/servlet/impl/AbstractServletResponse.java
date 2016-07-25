@@ -32,34 +32,4 @@ public abstract class AbstractServletResponse implements ServletResponse {
 
 		return this.request;
 	}
-
-	@Override
-	public abstract ServletResponse addHeader(String name, Object value);
-
-	@Override
-	public abstract boolean containsHeader(String name);
-
-	@Override
-	public abstract ServletResponse setHeader(String name, Object value);
-
-	@Override
-	public abstract String getCharacterEncoding();
-
-	@Override
-	public abstract ServletResponse setCharacterEncoding(String charset);
-
-	@Override
-	public abstract String getContentType();
-
-	@Override
-	public abstract ServletResponse setContentType(String type);
-
-	@Override
-	public abstract ServletResponse setContentLength(int len);
-
-	@Override
-	public abstract ServletResponse setStatus(int status);
-
-	@Override
-	public abstract boolean isCommitted();
 }

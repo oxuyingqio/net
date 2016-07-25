@@ -42,56 +42,28 @@ public interface ServletResponse {
 	public ServletResponse setHeader(String name, Object value);
 
 	/**
-	 * 获取编码格式
+	 * 添加参数
 	 * 
+	 * @param name
+	 * @param value
 	 * @return
 	 */
-	public String getCharacterEncoding();
+	public ServletResponse addParamter(String name, Object value);
 
 	/**
-	 * 设置编码格式
+	 * 某项参数是否存在
 	 * 
-	 * @param charset
-	 *            编码格式
+	 * @param name
 	 * @return
 	 */
-	public ServletResponse setCharacterEncoding(String charset);
+	public boolean containsParamter(String name);
 
 	/**
-	 * 获取内容类型
+	 * 设置某项参数的值
 	 * 
+	 * @param name
+	 * @param value
 	 * @return
 	 */
-	public String getContentType();
-
-	/**
-	 * 设置内容类型
-	 * 
-	 * @param type
-	 * @return
-	 */
-	public ServletResponse setContentType(String type);
-
-	/**
-	 * 设置报体长度
-	 * 
-	 * @param len
-	 * @return
-	 */
-	public ServletResponse setContentLength(int len);
-
-	/**
-	 * 设置响应状态
-	 * 
-	 * @param status
-	 * @return
-	 */
-	public ServletResponse setStatus(int status);
-
-	/**
-	 * 响应是否已提交
-	 * 
-	 * @return
-	 */
-	public boolean isCommitted();
+	public ServletResponse setParamter(String name, Object value);
 }

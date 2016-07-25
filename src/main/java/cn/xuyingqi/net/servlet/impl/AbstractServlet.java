@@ -2,8 +2,6 @@ package cn.xuyingqi.net.servlet.impl;
 
 import cn.xuyingqi.net.servlet.Servlet;
 import cn.xuyingqi.net.servlet.ServletConfig;
-import cn.xuyingqi.net.servlet.ServletRequest;
-import cn.xuyingqi.net.servlet.ServletResponse;
 
 /**
  * 抽象公共Servlet
@@ -36,13 +34,4 @@ public abstract class AbstractServlet implements Servlet {
 
 		return this.config;
 	}
-
-	@Override
-	public abstract void service(ServletRequest request, ServletResponse response);
-
-	@Override
-	public abstract void destroy();
-
-	@Override
-	public abstract String getServletInfo();
 }

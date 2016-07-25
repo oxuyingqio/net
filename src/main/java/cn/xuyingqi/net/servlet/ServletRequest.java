@@ -90,27 +90,6 @@ public interface ServletRequest {
 	public Object getHeader(String name);
 
 	/**
-	 * 获取编码格式
-	 * 
-	 * @return
-	 */
-	public String getCharacterEncoding();
-
-	/**
-	 * 获取内容类型
-	 * 
-	 * @return
-	 */
-	public String getContentType();
-
-	/**
-	 * 获取内容长度
-	 * 
-	 * @return
-	 */
-	public int getContentLength();
-
-	/**
 	 * 获取参数名称集合
 	 * 
 	 * @return

@@ -92,27 +92,6 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	}
 
 	@Override
-	public abstract Set<String> getHeaderNames();
-
-	@Override
-	public abstract Object getHeader(String name);
-
-	@Override
-	public abstract String getCharacterEncoding();
-
-	@Override
-	public abstract String getContentType();
-
-	@Override
-	public abstract int getContentLength();
-
-	@Override
-	public abstract Set<String> getParameterNames();
-
-	@Override
-	public abstract Object getParameter(String name);
-
-	@Override
 	public Set<String> getAttributeNames() {
 
 		return attr.keySet();
