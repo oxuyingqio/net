@@ -11,7 +11,7 @@ import java.util.Map;
 public interface Header {
 
 	/**
-	 * 将报头转换为Map集合
+	 * 转换为Map集合
 	 * 
 	 * @return
 	 */

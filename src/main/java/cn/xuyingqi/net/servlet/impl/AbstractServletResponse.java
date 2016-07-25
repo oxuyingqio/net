@@ -17,16 +17,6 @@ public abstract class AbstractServletResponse implements ServletResponse {
 	private ServletRequest request;
 
 	/**
-	 * 编码格式
-	 */
-	public String charset;
-
-	/**
-	 * 内容类型
-	 */
-	private String type;
-
-	/**
 	 * 抽象公共Servlet响应
 	 * 
 	 * @param servletRequest
@@ -53,32 +43,16 @@ public abstract class AbstractServletResponse implements ServletResponse {
 	public abstract ServletResponse setHeader(String name, Object value);
 
 	@Override
-	public String getCharacterEncoding() {
-
-		return this.charset;
-	}
+	public abstract String getCharacterEncoding();
 
 	@Override
-	public ServletResponse setCharacterEncoding(String charset) {
-
-		this.charset = charset;
-
-		return this;
-	}
+	public abstract ServletResponse setCharacterEncoding(String charset);
 
 	@Override
-	public String getContentType() {
-
-		return this.type;
-	}
+	public abstract String getContentType();
 
 	@Override
-	public ServletResponse setContentType(String type) {
-
-		this.type = type;
-
-		return this;
-	}
+	public abstract ServletResponse setContentType(String type);
 
 	@Override
 	public abstract ServletResponse setContentLength(int len);
