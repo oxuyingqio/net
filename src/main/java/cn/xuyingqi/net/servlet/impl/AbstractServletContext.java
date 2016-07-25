@@ -52,7 +52,4 @@ public abstract class AbstractServletContext implements ServletContext {
 
 		return this;
 	}
-
-	@Override
-	public abstract String getServletContextName();
 }

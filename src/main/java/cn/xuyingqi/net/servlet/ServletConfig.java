@@ -23,7 +23,7 @@ public interface ServletConfig {
 	 * @param name
 	 * @return
 	 */
-	public Object getInitParameter(String name);
+	public String getInitParameter(String name);
 
 	/**
 	 * 获取Servlet上下文
@@ -31,11 +31,4 @@ public interface ServletConfig {
 	 * @return
 	 */
 	public ServletContext getServletContext();
-
-	/**
-	 * 获取Servlet名称
-	 * 
-	 * @return
-	 */
-	public String getServletName();
 }

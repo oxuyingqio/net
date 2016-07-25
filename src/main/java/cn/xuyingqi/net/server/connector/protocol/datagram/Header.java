@@ -1,5 +1,7 @@
 package cn.xuyingqi.net.server.connector.protocol.datagram;
 
+import java.util.Map;
+
 /**
  * 报头
  * 
@@ -9,9 +11,9 @@ package cn.xuyingqi.net.server.connector.protocol.datagram;
 public interface Header {
 
 	/**
-	 * 获取报体长度
+	 * 将报头转换为Map集合
 	 * 
 	 * @return
 	 */
-	public int getContentLength();
+	public Map<String, Object> convertMap();
 }

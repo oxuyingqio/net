@@ -59,11 +59,4 @@ public interface ServletContext {
 	 *            属性值
 	 */
 	public ServletContext setAttribute(String name, Object object);
-
-	/**
-	 * 获取Servlet上下文名称
-	 * 
-	 * @return
-	 */
-	public String getServletContextName();
 }

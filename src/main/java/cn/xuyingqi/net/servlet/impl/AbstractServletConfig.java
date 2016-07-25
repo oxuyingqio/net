@@ -17,11 +17,8 @@ public abstract class AbstractServletConfig implements ServletConfig {
 	public abstract Set<String> getInitParameterNames();
 
 	@Override
-	public abstract Object getInitParameter(String name);
+	public abstract String getInitParameter(String name);
 
 	@Override
 	public abstract ServletContext getServletContext();
-
-	@Override
-	public abstract String getServletName();
 }
