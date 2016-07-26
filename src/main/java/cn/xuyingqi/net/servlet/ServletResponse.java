@@ -48,7 +48,7 @@ public interface ServletResponse {
 	 * @param value
 	 * @return
 	 */
-	public ServletResponse addParamter(String name, Object value);
+	public ServletResponse addParameter(String name, Object value);
 
 	/**
 	 * 某项参数是否存在
@@ -56,7 +56,7 @@ public interface ServletResponse {
 	 * @param name
 	 * @return
 	 */
-	public boolean containsParamter(String name);
+	public boolean containsParameter(String name);
 
 	/**
 	 * 设置某项参数的值
@@ -65,5 +65,5 @@ public interface ServletResponse {
 	 * @param value
 	 * @return
 	 */
-	public ServletResponse setParamter(String name, Object value);
+	public ServletResponse setParameter(String name, Object value);
 }
