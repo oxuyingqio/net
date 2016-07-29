@@ -1,5 +1,6 @@
 package cn.xuyingqi.net.servlet.impl;
 
+import java.net.InetAddress;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -69,6 +70,30 @@ public abstract class AbstractServletSession implements ServletSession {
 
 		return this.creationTime;
 	}
+
+	@Override
+	public abstract long getLastAccessedTime();
+
+	@Override
+	public abstract InetAddress getLocalAddr();
+
+	@Override
+	public abstract String getLocalHost();
+
+	@Override
+	public abstract int getLocalPort();
+
+	@Override
+	public abstract String getProtocol();
+
+	@Override
+	public abstract InetAddress getRemoteAddr();
+
+	@Override
+	public abstract String getRemoteHost();
+
+	@Override
+	public abstract int getRemotePort();
 
 	@Override
 	public Set<String> getAttributeNames() {

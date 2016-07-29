@@ -26,21 +26,21 @@ public interface ServletRequest {
 	public String getServletSessionId();
 
 	/**
-	 * 获取服务器IP地址
+	 * 获取本机地址
 	 * 
 	 * @return
 	 */
 	public InetAddress getLocalAddr();
 
 	/**
-	 * 获取服务器主机名
+	 * 获取本机主机名
 	 * 
 	 * @return
 	 */
 	public String getLocalHost();
 
 	/**
-	 * 获取服务器端口号
+	 * 获取本机端口号
 	 * 
 	 * @return
 	 */
@@ -54,55 +54,55 @@ public interface ServletRequest {
 	public String getProtocol();
 
 	/**
-	 * 获取客户端IP地址
+	 * 获取远程地址
 	 * 
 	 * @return
 	 */
 	public InetAddress getRemoteAddr();
 
 	/**
-	 * 获取客户端主机名
+	 * 获取远程主机名
 	 * 
 	 * @return
 	 */
 	public String getRemoteHost();
 
 	/**
-	 * 获取客户端端口号
+	 * 获取远程端口号
 	 * 
 	 * @return
 	 */
 	public int getRemotePort();
 
-	/**
-	 * 获取报头名称集合
-	 * 
-	 * @return
-	 */
-	public Set<String> getHeaderNames();
-
-	/**
-	 * 获取报头某项的值
-	 * 
-	 * @param name
-	 * @return
-	 */
-	public Object getHeader(String name);
-
-	/**
-	 * 获取参数名称集合
-	 * 
-	 * @return
-	 */
-	public Set<String> getParameterNames();
-
-	/**
-	 * 获取参数的值
-	 * 
-	 * @param name
-	 * @return
-	 */
-	public Object getParameter(String name);
+//	/**
+//	 * 获取报头名称集合
+//	 * 
+//	 * @return
+//	 */
+//	public Set<String> getHeaderNames();
+//
+//	/**
+//	 * 获取报头某项的值
+//	 * 
+//	 * @param name
+//	 * @return
+//	 */
+//	public Object getHeader(String name);
+//
+//	/**
+//	 * 获取参数名称集合
+//	 * 
+//	 * @return
+//	 */
+//	public Set<String> getParameterNames();
+//
+//	/**
+//	 * 获取参数的值
+//	 * 
+//	 * @param name
+//	 * @return
+//	 */
+//	public Object getParameter(String name);
 
 	/**
 	 * 获取属性名称集合
