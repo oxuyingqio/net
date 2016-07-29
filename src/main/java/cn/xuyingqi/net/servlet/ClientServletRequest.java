@@ -15,7 +15,7 @@ public interface ClientServletRequest extends ServletRequest {
 	 * @param value
 	 * @return
 	 */
-	public ServletResponse addHeader(String name, Object value);
+	public ClientServletRequest addHeader(String name, Object value);
 
 	/**
 	 * 报头项目是否存在
@@ -32,7 +32,7 @@ public interface ClientServletRequest extends ServletRequest {
 	 * @param value
 	 * @return
 	 */
-	public ServletResponse setHeader(String name, Object value);
+	public ClientServletRequest setHeader(String name, Object value);
 
 	/**
 	 * 添加报体项目
@@ -41,7 +41,7 @@ public interface ClientServletRequest extends ServletRequest {
 	 * @param value
 	 * @return
 	 */
-	public ServletResponse addPayload(String name, Object value);
+	public ClientServletRequest addPayload(String name, Object value);
 
 	/**
 	 * 报体项目是否存在
@@ -58,5 +58,5 @@ public interface ClientServletRequest extends ServletRequest {
 	 * @param value
 	 * @return
 	 */
-	public ServletResponse setPayload(String name, Object value);
+	public ClientServletRequest setPayload(String name, Object value);
 }
