@@ -1,4 +1,4 @@
-package cn.xuyingqi.net.server.protocol;
+package cn.xuyingqi.net.protocol;
 
 /**
  * 协议

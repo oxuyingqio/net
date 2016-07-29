@@ -40,21 +40,21 @@ public interface ServletSession {
 	public long getLastAccessedTime();
 
 	/**
-	 * 获取服务器IP地址
+	 * 获取本机地址
 	 * 
 	 * @return
 	 */
 	public InetAddress getLocalAddr();
 
 	/**
-	 * 获取服务器主机名
+	 * 获取本机主机名
 	 * 
 	 * @return
 	 */
 	public String getLocalHost();
 
 	/**
-	 * 获取服务器端口号
+	 * 获取本机端口号
 	 * 
 	 * @return
 	 */
@@ -68,21 +68,21 @@ public interface ServletSession {
 	public String getProtocol();
 
 	/**
-	 * 获取客户端IP地址
+	 * 获取远程地址
 	 * 
 	 * @return
 	 */
 	public InetAddress getRemoteAddr();
 
 	/**
-	 * 获取客户端主机名
+	 * 获取远程主机名
 	 * 
 	 * @return
 	 */
 	public String getRemoteHost();
 
 	/**
-	 * 获取客户端端口号
+	 * 获取远程端口号
 	 * 
 	 * @return
 	 */
