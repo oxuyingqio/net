@@ -1,7 +1,5 @@
 package cn.xuyingqi.net.server.connector;
 
-import cn.xuyingqi.net.server.container.ProtocolContainer;
-
 /**
  * 连接器
  * 
@@ -17,14 +15,6 @@ public interface Connector {
 	 *            连接器配置
 	 */
 	public void init(ConnectorConfig connectorConfig);
-
-	/**
-	 * 设置协议容器
-	 * 
-	 * @param protocolContainer
-	 *            协议容器
-	 */
-	public void setProtocolContainer(ProtocolContainer protocolContainer);
 
 	/**
 	 * 连接
