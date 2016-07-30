@@ -20,6 +20,7 @@ public abstract class AbstractClientServletResponse extends AbstractServletRespo
 	 *            Servlet请求
 	 */
 	public AbstractClientServletResponse(ServletRequest servletRequest) {
+
 		super(servletRequest);
 	}
 

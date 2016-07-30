@@ -6,38 +6,33 @@ import cn.xuyingqi.net.servlet.ServerServletRequest;
 import cn.xuyingqi.net.servlet.ServletSession;
 
 /**
- * 抽象公共Servlet请求
+ * 抽象公共服务器端Servlet请求
+ * 
  * @author XuYQ
  *
  */
-public class AbstractServerServletRequest extends AbstractServletRequest implements ServerServletRequest {
+public abstract class AbstractServerServletRequest extends AbstractServletRequest implements ServerServletRequest {
 
+	/**
+	 * 抽象公共服务器端Servlet请求
+	 * 
+	 * @param servletSession
+	 *            servlet会话
+	 */
 	public AbstractServerServletRequest(ServletSession servletSession) {
+
 		super(servletSession);
 	}
 
 	@Override
-	public Set<String> getHeaderNames() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public abstract Set<String> getHeaderNames();
 
 	@Override
-	public Object getHeader(String name) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public abstract Object getHeader(String name);
 
 	@Override
-	public Set<String> getPayloadNames() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public abstract Set<String> getPayloadNames();
 
 	@Override
-	public Object getPayload(String name) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	public abstract Object getPayload(String name);
 }
