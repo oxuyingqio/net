@@ -74,36 +74,6 @@ public interface ServletRequest {
 	 */
 	public int getRemotePort();
 
-//	/**
-//	 * 获取报头名称集合
-//	 * 
-//	 * @return
-//	 */
-//	public Set<String> getHeaderNames();
-//
-//	/**
-//	 * 获取报头某项的值
-//	 * 
-//	 * @param name
-//	 * @return
-//	 */
-//	public Object getHeader(String name);
-//
-//	/**
-//	 * 获取参数名称集合
-//	 * 
-//	 * @return
-//	 */
-//	public Set<String> getParameterNames();
-//
-//	/**
-//	 * 获取参数的值
-//	 * 
-//	 * @param name
-//	 * @return
-//	 */
-//	public Object getParameter(String name);
-
 	/**
 	 * 获取属性名称集合
 	 * 
