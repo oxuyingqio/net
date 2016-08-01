@@ -45,10 +45,23 @@ public abstract class AbstractServletSession implements ServletSession {
 	 */
 	public AbstractServletSession(ServletContext servletContext) {
 
+		this(servletContext, UUID.randomUUID().toString());
+	}
+
+	/**
+	 * 抽象公共Servlet会话
+	 * 
+	 * @param servletContext
+	 *            Servlet上下文
+	 * @param id
+	 *            会话ID
+	 */
+	public AbstractServletSession(ServletContext servletContext, String id) {
+
 		// Servlet上下文
 		this.context = servletContext;
 		// 会话ID
-		this.id = UUID.randomUUID().toString();
+		this.id = id;
 		// 会话创建时间
 		this.creationTime = System.currentTimeMillis();
 	}
