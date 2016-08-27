@@ -1,7 +1,6 @@
 package cn.xuyingqi.net.servlet.impl;
 
-import java.util.Set;
-
+import cn.xuyingqi.net.protocol.Datagram;
 import cn.xuyingqi.net.servlet.ServerServletRequest;
 import cn.xuyingqi.net.servlet.ServletSession;
 
@@ -25,14 +24,5 @@ public abstract class AbstractServerServletRequest extends AbstractServletReques
 	}
 
 	@Override
-	public abstract Set<String> getHeaderNames();
-
-	@Override
-	public abstract Object getHeader(String name);
-
-	@Override
-	public abstract Set<String> getPayloadNames();
-
-	@Override
-	public abstract Object getPayload(String name);
+	public abstract Datagram getDatagram();
 }

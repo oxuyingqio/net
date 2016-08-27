@@ -1,6 +1,6 @@
 package cn.xuyingqi.net.servlet;
 
-import java.util.Set;
+import cn.xuyingqi.net.protocol.Datagram;
 
 /**
  * 客户端Servlet响应
@@ -11,32 +11,9 @@ import java.util.Set;
 public interface ClientServletResponse extends ServletResponse {
 
 	/**
-	 * 获取报头项目名称集合
+	 * 获取数据报文
 	 * 
 	 * @return
 	 */
-	public Set<String> getHeaderNames();
-
-	/**
-	 * 获取报头某项的值
-	 * 
-	 * @param name
-	 * @return
-	 */
-	public Object getHeader(String name);
-
-	/**
-	 * 获取报体项目名称集合
-	 * 
-	 * @return
-	 */
-	public Set<String> getPayloadNames();
-
-	/**
-	 * 获取报体某项的值
-	 * 
-	 * @param name
-	 * @return
-	 */
-	public Object getPayload(String name);
+	public Datagram getDatagram();
 }

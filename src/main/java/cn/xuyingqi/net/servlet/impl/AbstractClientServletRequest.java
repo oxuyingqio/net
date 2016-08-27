@@ -1,5 +1,6 @@
 package cn.xuyingqi.net.servlet.impl;
 
+import cn.xuyingqi.net.protocol.Datagram;
 import cn.xuyingqi.net.servlet.ClientServletRequest;
 import cn.xuyingqi.net.servlet.ServletSession;
 
@@ -23,20 +24,5 @@ public abstract class AbstractClientServletRequest extends AbstractServletReques
 	}
 
 	@Override
-	public abstract ClientServletRequest addHeader(String name, Object value);
-
-	@Override
-	public abstract boolean containsHeader(String name);
-
-	@Override
-	public abstract ClientServletRequest setHeader(String name, Object value);
-
-	@Override
-	public abstract ClientServletRequest addPayload(String name, Object value);
-
-	@Override
-	public abstract boolean containsPayload(String name);
-
-	@Override
-	public abstract ClientServletRequest setPayload(String name, Object value);
+	public abstract ClientServletRequest setDatagram(Datagram datagram);
 }
