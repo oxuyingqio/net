@@ -18,11 +18,6 @@ import cn.xuyingqi.util.util.MapFactory;
 public abstract class AbstractServletSession implements ServletSession {
 
 	/**
-	 * Servlet上下文
-	 */
-	private ServletContext context;
-
-	/**
 	 * 会话ID
 	 */
 	private String id;
@@ -39,27 +34,20 @@ public abstract class AbstractServletSession implements ServletSession {
 
 	/**
 	 * 抽象公共Servlet会话
-	 * 
-	 * @param servletContext
-	 *            Servlet上下文
 	 */
-	public AbstractServletSession(ServletContext servletContext) {
+	public AbstractServletSession() {
 
-		this(servletContext, UUID.randomUUID().toString());
+		this(UUID.randomUUID().toString());
 	}
 
 	/**
 	 * 抽象公共Servlet会话
 	 * 
-	 * @param servletContext
-	 *            Servlet上下文
 	 * @param id
 	 *            会话ID
 	 */
-	public AbstractServletSession(ServletContext servletContext, String id) {
+	public AbstractServletSession(String id) {
 
-		// Servlet上下文
-		this.context = servletContext;
 		// 会话ID
 		this.id = id;
 		// 会话创建时间
@@ -67,10 +55,7 @@ public abstract class AbstractServletSession implements ServletSession {
 	}
 
 	@Override
-	public ServletContext getServletContext() {
-
-		return this.context;
-	}
+	public abstract ServletContext getServletContext();
 
 	@Override
 	public String getId() {
