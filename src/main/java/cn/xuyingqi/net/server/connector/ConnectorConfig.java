@@ -35,4 +35,11 @@ public interface ConnectorConfig {
 	 * @return
 	 */
 	public int getTimeout();
+
+	/**
+	 * 获取最大链接数
+	 * 
+	 * @return
+	 */
+	public int getMaxConnections();
 }
