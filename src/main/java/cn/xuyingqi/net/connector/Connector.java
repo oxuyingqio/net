@@ -1,4 +1,4 @@
-package cn.xuyingqi.net.server.connector;
+package cn.xuyingqi.net.connector;
 
 /**
  * 连接器

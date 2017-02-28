@@ -1,4 +1,6 @@
-package cn.xuyingqi.net.server.connector;
+package cn.xuyingqi.net.connector;
+
+import cn.xuyingqi.net.protocol.Protocol;
 
 /**
  * 连接器配置
@@ -9,11 +11,11 @@ package cn.xuyingqi.net.server.connector;
 public interface ConnectorConfig {
 
 	/**
-	 * 获取协议名称
+	 * 获取协议
 	 * 
 	 * @return
 	 */
-	public String getProtocol();
+	public Protocol getProtocol();
 
 	/**
 	 * 获取主机地址
