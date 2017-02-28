@@ -31,4 +31,11 @@ public interface ServletConfig {
 	 * @return
 	 */
 	public ServletContext getServletContext();
+
+	/**
+	 * 获取Servlet名称
+	 * 
+	 * @return
+	 */
+	public String getServletName();
 }

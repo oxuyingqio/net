@@ -20,4 +20,9 @@ public interface Connector {
 	 * 连接
 	 */
 	public void connect();
+
+	/**
+	 * 终止连接
+	 */
+	public void terminate();
 }

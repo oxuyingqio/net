@@ -11,13 +11,6 @@ import cn.xuyingqi.net.protocol.Protocol;
 public interface ConnectorConfig {
 
 	/**
-	 * 获取协议
-	 * 
-	 * @return
-	 */
-	public Protocol getProtocol();
-
-	/**
 	 * 获取主机地址
 	 * 
 	 * @return
@@ -39,9 +32,9 @@ public interface ConnectorConfig {
 	public int getTimeout();
 
 	/**
-	 * 获取最大链接数
+	 * 获取协议
 	 * 
 	 * @return
 	 */
-	public int getMaxConnections();
+	public Protocol getProtocol();
 }

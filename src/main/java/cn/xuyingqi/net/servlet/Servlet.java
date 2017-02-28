@@ -37,4 +37,11 @@ public interface Servlet {
 	 * 销毁Servlet
 	 */
 	public void destroy();
+
+	/**
+	 * 获取Servlet描述
+	 * 
+	 * @return
+	 */
+	public String getServletInfo();
 }

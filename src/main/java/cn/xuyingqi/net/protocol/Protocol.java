@@ -8,4 +8,10 @@ package cn.xuyingqi.net.protocol;
  */
 public interface Protocol {
 
+	/**
+	 * 获取协议名称
+	 * 
+	 * @return
+	 */
+	public String getName();
 }
