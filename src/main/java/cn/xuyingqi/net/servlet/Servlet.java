@@ -9,22 +9,22 @@ package cn.xuyingqi.net.servlet;
 public interface Servlet {
 
 	/**
-	 * 初始化Servlet
+	 * 初始化
 	 * 
 	 * @param servletConfig
-	 *            Servlet配置
+	 *            配置
 	 */
 	public void init(ServletConfig servletConfig);
 
 	/**
-	 * 获取Servlet配置
+	 * 获取配置
 	 * 
 	 * @return
 	 */
 	public ServletConfig getServletConfig();
 
 	/**
-	 * Servlet服务
+	 * 服务
 	 * 
 	 * @param request
 	 *            请求
@@ -34,12 +34,12 @@ public interface Servlet {
 	public void service(ServletRequest request, ServletResponse response);
 
 	/**
-	 * 销毁Servlet
+	 * 销毁
 	 */
 	public void destroy();
 
 	/**
-	 * 获取Servlet描述
+	 * 获取描述
 	 * 
 	 * @return
 	 */

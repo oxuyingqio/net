@@ -22,7 +22,7 @@ public interface Connector {
 	public void connect();
 
 	/**
-	 * 终止连接
+	 * 停止
 	 */
-	public void terminate();
+	public void stop();
 }

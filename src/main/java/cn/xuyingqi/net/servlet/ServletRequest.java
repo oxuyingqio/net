@@ -12,14 +12,14 @@ import java.util.Set;
 public interface ServletRequest {
 
 	/**
-	 * 获取Servlet会话
+	 * 获取会话
 	 * 
 	 * @return
 	 */
 	public ServletSession getServletSession();
 
 	/**
-	 * 获取Servlet会话ID
+	 * 获取会话ID
 	 * 
 	 * @return
 	 */

@@ -12,7 +12,7 @@ import java.util.Set;
 public interface ServletSession {
 
 	/**
-	 * 获取Servlet上下文
+	 * 获取上下文
 	 * 
 	 * @return
 	 */

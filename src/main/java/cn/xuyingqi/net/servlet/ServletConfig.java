@@ -26,14 +26,14 @@ public interface ServletConfig {
 	public String getInitParameter(String name);
 
 	/**
-	 * 获取Servlet上下文
+	 * 获取上下文
 	 * 
 	 * @return
 	 */
 	public ServletContext getServletContext();
 
 	/**
-	 * 获取Servlet名称
+	 * 获取名称
 	 * 
 	 * @return
 	 */

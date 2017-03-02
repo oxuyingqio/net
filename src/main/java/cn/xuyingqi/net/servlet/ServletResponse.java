@@ -9,7 +9,7 @@ package cn.xuyingqi.net.servlet;
 public interface ServletResponse {
 
 	/**
-	 * 获取Servlet请求
+	 * 获取请求
 	 * 
 	 * @return
 	 */
