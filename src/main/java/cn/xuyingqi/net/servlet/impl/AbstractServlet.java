@@ -14,7 +14,7 @@ import cn.xuyingqi.net.servlet.ServletResponse;
 public abstract class AbstractServlet implements Servlet {
 
 	/**
-	 * Servlet配置
+	 * 配置
 	 */
 	private ServletConfig config;
 
@@ -42,4 +42,9 @@ public abstract class AbstractServlet implements Servlet {
 
 	@Override
 	public abstract void destroy();
+
+	@Override
+	public String getServletInfo() {
+		return "";
+	}
 }

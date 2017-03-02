@@ -21,4 +21,7 @@ public abstract class AbstractServletConfig implements ServletConfig {
 
 	@Override
 	public abstract ServletContext getServletContext();
+
+	@Override
+	public abstract String getServletName();
 }

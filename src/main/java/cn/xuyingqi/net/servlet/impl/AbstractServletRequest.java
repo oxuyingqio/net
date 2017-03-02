@@ -17,7 +17,7 @@ import cn.xuyingqi.util.util.MapFactory;
 public abstract class AbstractServletRequest implements ServletRequest {
 
 	/**
-	 * Servlet会话
+	 * 会话
 	 */
 	private ServletSession session;
 
@@ -30,7 +30,7 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	 * 抽象公共Servlet请求
 	 * 
 	 * @param servletSession
-	 *            Servlet会话
+	 *            会话
 	 */
 	public AbstractServletRequest(ServletSession servletSession) {
 
