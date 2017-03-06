@@ -94,19 +94,19 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	@Override
 	public Set<String> getAttributeNames() {
 
-		return attr.keySet();
+		return this.attr.keySet();
 	}
 
 	@Override
 	public Object getAttribute(String name) {
 
-		return attr.get(name);
+		return this.attr.get(name);
 	}
 
 	@Override
 	public ServletRequest removeAttribute(String name) {
 
-		attr.remove(name);
+		this.attr.remove(name);
 
 		return this;
 	}
@@ -114,7 +114,7 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	@Override
 	public ServletRequest setAttribute(String name, Object object) {
 
-		attr.put(name, object);
+		this.attr.put(name, object);
 
 		return this;
 	}

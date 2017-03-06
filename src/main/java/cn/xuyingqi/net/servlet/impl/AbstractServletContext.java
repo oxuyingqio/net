@@ -28,19 +28,19 @@ public abstract class AbstractServletContext implements ServletContext {
 	@Override
 	public Set<String> getAttributeNames() {
 
-		return attr.keySet();
+		return this.attr.keySet();
 	}
 
 	@Override
 	public Object getAttribute(String name) {
 
-		return attr.get(name);
+		return this.attr.get(name);
 	}
 
 	@Override
 	public ServletContext removeAttribute(String name) {
 
-		attr.remove(name);
+		this.attr.remove(name);
 
 		return this;
 	}
@@ -48,7 +48,7 @@ public abstract class AbstractServletContext implements ServletContext {
 	@Override
 	public ServletContext setAttribute(String name, Object object) {
 
-		attr.put(name, object);
+		this.attr.put(name, object);
 
 		return this;
 	}

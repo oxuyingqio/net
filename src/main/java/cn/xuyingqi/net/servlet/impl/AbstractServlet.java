@@ -45,6 +45,7 @@ public abstract class AbstractServlet implements Servlet {
 
 	@Override
 	public String getServletInfo() {
-		return "";
+
+		return this.getServletConfig().getServletName();
 	}
 }
