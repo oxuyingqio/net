@@ -34,14 +34,14 @@ public interface Servlet {
 	public void service(ServletRequest request, ServletResponse response);
 
 	/**
-	 * 销毁
-	 */
-	public void destroy();
-
-	/**
 	 * 获取描述
 	 * 
 	 * @return
 	 */
 	public String getServletInfo();
+
+	/**
+	 * 销毁
+	 */
+	public void destroy();
 }

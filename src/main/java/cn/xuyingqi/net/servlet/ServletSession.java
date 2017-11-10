@@ -40,6 +40,13 @@ public interface ServletSession {
 	public long getLastAccessedTime();
 
 	/**
+	 * 获取保持会话的最大时间间隔
+	 * 
+	 * @return
+	 */
+	public int getMaxInactiveInterval();
+
+	/**
 	 * 获取本机地址
 	 * 
 	 * @return

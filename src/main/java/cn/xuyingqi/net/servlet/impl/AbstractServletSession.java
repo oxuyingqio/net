@@ -34,22 +34,15 @@ public abstract class AbstractServletSession implements ServletSession {
 
 	/**
 	 * 抽象公共Servlet会话
-	 */
-	public AbstractServletSession() {
-
-		this(UUID.randomUUID().toString());
-	}
-
-	/**
-	 * 抽象公共Servlet会话
 	 * 
 	 * @param id
 	 *            会话ID
 	 */
-	public AbstractServletSession(String id) {
+	public AbstractServletSession() {
 
 		// 会话ID
-		this.id = id;
+		this.id = UUID.randomUUID().toString();
+
 		// 会话创建时间
 		this.creationTime = System.currentTimeMillis();
 	}
@@ -71,6 +64,9 @@ public abstract class AbstractServletSession implements ServletSession {
 
 	@Override
 	public abstract long getLastAccessedTime();
+
+	@Override
+	public abstract int getMaxInactiveInterval();
 
 	@Override
 	public abstract InetAddress getLocalAddr();

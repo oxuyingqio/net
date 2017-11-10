@@ -37,4 +37,11 @@ public interface ConnectorConfig {
 	 * @return
 	 */
 	public Protocol getProtocol();
+
+	/**
+	 * 获取SSL配置
+	 * 
+	 * @return
+	 */
+	public SSLConfig getSSLConfig();
 }
