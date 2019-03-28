@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Set;
 
 import cn.xuyingqi.net.servlet.ServletContext;
-import cn.xuyingqi.util.util.MapFactory;
+import cn.xuyingqi.util.MapFactory;
 
 /**
  * 抽象公共Servlet上下文

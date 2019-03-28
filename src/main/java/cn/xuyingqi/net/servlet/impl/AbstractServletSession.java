@@ -7,7 +7,7 @@ import java.util.UUID;
 
 import cn.xuyingqi.net.servlet.ServletContext;
 import cn.xuyingqi.net.servlet.ServletSession;
-import cn.xuyingqi.util.util.MapFactory;
+import cn.xuyingqi.util.MapFactory;
 
 /**
  * 抽象公共Servlet会话

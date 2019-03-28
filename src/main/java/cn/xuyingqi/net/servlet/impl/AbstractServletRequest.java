@@ -6,7 +6,7 @@ import java.util.Set;
 
 import cn.xuyingqi.net.servlet.ServletRequest;
 import cn.xuyingqi.net.servlet.ServletSession;
-import cn.xuyingqi.util.util.MapFactory;
+import cn.xuyingqi.util.MapFactory;
 
 /**
  * 抽象公共Servlet请求
