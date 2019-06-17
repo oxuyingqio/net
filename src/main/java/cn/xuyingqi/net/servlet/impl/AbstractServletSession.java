@@ -21,12 +21,10 @@ public abstract class AbstractServletSession implements ServletSession {
 	 * 会话ID
 	 */
 	private String id;
-
 	/**
 	 * 会话创建时间
 	 */
 	private long creationTime;
-
 	/**
 	 * 属性
 	 */

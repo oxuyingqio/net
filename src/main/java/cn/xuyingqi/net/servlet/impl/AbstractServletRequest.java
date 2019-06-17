@@ -20,7 +20,6 @@ public abstract class AbstractServletRequest implements ServletRequest {
 	 * 会话
 	 */
 	private ServletSession session;
-
 	/**
 	 * 属性
 	 */
